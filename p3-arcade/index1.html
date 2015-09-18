@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100">
+
+<script>
+//    var c=document.getElementById("myCanvas");
+//    var ctx=c.getContext("2d");
+//    ctx.fillStyle="red";
+//    ctx.fillRect(10,10,50,50);
+//
+//    for(i=0, i<createimageDataimageData.data.length; i++){
+//        var imgData=ctx.getImageData(10,10,50,50);
+//        ctx.putImageData(imgData,10,70);
+//    };
+
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var imgData = ctx.createImageData(100, 100);
+ctx.fillRect(10,10,50,50);
+//var i;
+//for (i = 0; i < imgData.data.length/4; i++) {
+//    if(i%10 === 0){
+//    imgData.data[i*4+1] = 255;
+//    imgData.data[i*4+3] = 255;
+//    }
+//
+//    //imgData.data[i+3] = 255;
+//}
+
+var i;
+for (i = 0; i < imgData.data.length/4; i++) {
+    if(i%10 === 0){
+        var brightness = 0.34 * data[i*4] + 0.5 * data[i*4 + 1] + 0.16 * data[i*4 + 2];
+
+        imgData.data[i*4+1] = brightness;
+        imgData.data[i*4+3] = brightness;
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+
+}
+
+
+//    ctx.fillText(imgData.data.length,10,50);
+
+</script>
+
+</body>
+</html>
+
+
+
+</script>
+
+</canvas>
+
+</body>
+</html>
